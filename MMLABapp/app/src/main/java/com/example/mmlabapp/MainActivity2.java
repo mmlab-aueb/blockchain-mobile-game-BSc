@@ -31,6 +31,8 @@ public class MainActivity2 extends AppCompatActivity {
         text2 = text + "/" +e1.getText().toString();
         messageSender.execute(text2);
 
+        startActivity(new Intent(this, UnityHandlerActivity.class));
+
 
     }
 
