@@ -1,4 +1,4 @@
-pragma solidity ^0.4.20;
+pragma solidity ^0.8.6;
 
 contract Card is ERC721, ERC721Metadata, ERC721TokenReceiver{
 
