@@ -28,14 +28,8 @@
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
             android:hardwareAccelerated="false"
             android:launchMode="singleTask"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="landscape"
             android:theme="@style/UnityThemeSelector" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
             <meta-data
                 android:name="unityplayer.UnityActivity"
                 android:value="true" />
@@ -55,7 +49,7 @@
             android:value="portrait|landscape" />
         <meta-data
             android:name="unity.build-id"
-            android:value="3d384eb3-8880-46a5-8202-a89335a0e71d" />
+            android:value="b3ea5397-fbb1-4989-a29c-226f1712e636" />
     </application>
 
 </manifest>
