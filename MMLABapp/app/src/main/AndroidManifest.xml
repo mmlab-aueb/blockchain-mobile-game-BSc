@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MMLABapp">
         <activity android:name=".UnityHandlerActivity"></activity>
-        <activity android:name=".MainActivity2" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

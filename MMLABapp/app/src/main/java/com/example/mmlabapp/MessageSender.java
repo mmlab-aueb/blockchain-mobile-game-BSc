@@ -17,11 +17,14 @@ public class MessageSender extends AsyncTask<String,Void,Void>
     @Override
     protected Void doInBackground(String... voids) {
 
-        String message = voids[0];
+        String username = voids[0];
+        String password = voids[1];
         try{
             s = new Socket("192.168.2.6",7800);
             pw = new PrintWriter(s.getOutputStream());
-            pw.write(message);
+            pw.write(username);
+            pw.flush();
+            pw.write(password);
             pw.flush();
             pw.close();
             s.close();

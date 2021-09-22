@@ -9,26 +9,31 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText e2;
+    EditText username;
+    EditText password;
+    String text;
+    String text2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        e2 = (EditText)findViewById(R.id.editText);
-    }
-
-    public void next(View v){
-
-        OpenActivity2();
-
-    }
-
-    public void OpenActivity2(){
-         Intent intent = new Intent(this,MainActivity2.class);
-         intent.putExtra("Name",e2.getText().toString());
-         startActivity(intent);
+        password = (EditText)findViewById(R.id.Password);
+        username = (EditText)findViewById(R.id.Username);
     }
 
 
+
+    public void send(View v){
+
+        com.example.mmlabapp.MessageSender messageSender = new com.example.mmlabapp.MessageSender();
+        text = text + "/" +username.getText().toString();
+        text2 = text2 + "/" + password.getText().toString();
+        messageSender.execute(text,text2);
+
+        startActivity(new Intent(this, UnityHandlerActivity.class));
+
+
+    }
 }
