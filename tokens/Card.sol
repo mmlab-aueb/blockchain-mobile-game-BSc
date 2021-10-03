@@ -1,16 +1,26 @@
-pragma solidity ^0.8.6;
+// SPDX-License-Identifier: UNLICENSED
 
-contract Card is ERC721, ERC721Metadata, ERC721TokenReceiver{
+pragma solidity ^0.8.0;
 
-    using Address for address;
-    
-    //Card name
+import "IERC721.sol";
+import "IERC721Receiver.sol";
+import "IERC721Metadata.sol";
+
+
+/**
+ * @dev Implementation of https://eips.ethereum.org/EIPS/eip-721[ERC721] Non-Fungible Token Standard, including
+ * the Metadata extension, but not including the Enumerable extension, which is available separately as
+ * {ERC721Enumerable}.
+ */
+contract Card is  IERC721, IERC721Metadata {
+
+    // Token name
     string private _name;
 
-    //Card symbol 
+    // Token symbol
     string private _symbol;
 
-        // Mapping from token ID to owner address
+    // Mapping from token ID to owner address
     mapping(uint256 => address) private _owners;
 
     // Mapping owner address to token count
@@ -22,23 +32,14 @@ contract Card is ERC721, ERC721Metadata, ERC721TokenReceiver{
     // Mapping from owner to operator approvals
     mapping(address => mapping(address => bool)) private _operatorApprovals;
 
-    /*
-     * Initializes the contract by setting a `name` and a `symbol` to the token collection.
+    /**
+     * @dev Initializes the contract by setting a `name` and a `symbol` to the token collection.
      */
-    constructor public (string memory name_, string memory symbol_)  {
+    constructor(string memory name_, string memory symbol_) {
         _name = name_;
         _symbol = symbol_;
     }
 
-     /**
-     * @dev See {IERC165-supportsInterface}.
-     */
-    function supportsInterface(bytes4 interfaceId) public view virtual override(ERC165, IERC165) returns (bool) {
-        return
-            interfaceId == type(IERC721).interfaceId ||
-            interfaceId == type(IERC721Metadata).interfaceId ||
-            super.supportsInterface(interfaceId);
-    }
 
     /**
      * @dev See {IERC721-balanceOf}.
@@ -71,8 +72,30 @@ contract Card is ERC721, ERC721Metadata, ERC721TokenReceiver{
         return _symbol;
     }
 
+    /**
+     * @dev See {IERC721Metadata-tokenURI}.
+     */
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
+
+        string memory baseURI = _baseURI();
+        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, toString(tokenId))) : "";
+    }
+
+    /**
+     * @dev Base URI for computing {tokenURI}. If set, the resulting URI for each
+     * token will be the concatenation of the `baseURI` and the `tokenId`. Empty
+     * by default, can be overriden in child contracts.
+     */
+    function _baseURI() internal view virtual returns (string memory) {
+        return "";
+    }
+
+    /**
+     * @dev See {IERC721-approve}.
+     */
     function approve(address to, uint256 tokenId) public virtual override {
-        address owner = ERC721.ownerOf(tokenId);
+        address owner = ownerOf(tokenId);
         require(to != owner, "ERC721: approval to current owner");
 
         require(
@@ -196,10 +219,11 @@ contract Card is ERC721, ERC721Metadata, ERC721TokenReceiver{
      */
     function _isApprovedOrOwner(address spender, uint256 tokenId) internal view virtual returns (bool) {
         require(_exists(tokenId), "ERC721: operator query for nonexistent token");
-        address owner = ERC721.ownerOf(tokenId);
+        address owner =  ownerOf(tokenId);
         return (spender == owner || getApproved(tokenId) == spender || isApprovedForAll(owner, spender));
     }
-/**
+
+    /**
      * @dev Safely mints `tokenId` and transfers it to `to`.
      *
      * Requirements:
@@ -264,7 +288,7 @@ contract Card is ERC721, ERC721Metadata, ERC721TokenReceiver{
      * Emits a {Transfer} event.
      */
     function _burn(uint256 tokenId) internal virtual {
-        address owner = ERC721.ownerOf(tokenId);
+        address owner = ownerOf(tokenId);
 
         _beforeTokenTransfer(owner, address(0), tokenId);
 
@@ -293,7 +317,7 @@ contract Card is ERC721, ERC721Metadata, ERC721TokenReceiver{
         address to,
         uint256 tokenId
     ) internal virtual {
-        require(ERC721.ownerOf(tokenId) == from, "ERC721: transfer of token that is not own");
+        require(ownerOf(tokenId) == from, "ERC721: transfer of token that is not own");
         require(to != address(0), "ERC721: transfer to the zero address");
 
         _beforeTokenTransfer(from, to, tokenId);
@@ -315,11 +339,11 @@ contract Card is ERC721, ERC721Metadata, ERC721TokenReceiver{
      */
     function _approve(address to, uint256 tokenId) internal virtual {
         _tokenApprovals[tokenId] = to;
-        emit Approval(ERC721.ownerOf(tokenId), to, tokenId);
+        emit Approval(ownerOf(tokenId), to, tokenId);
     }
 
     /**
-     * Internal function to invoke {IERC721Receiver-onERC721Received} on a target address.
+     * @dev Internal function to invoke {IERC721Receiver-onERC721Received} on a target address.
      * The call is not executed if the target address is not a contract.
      *
      * @param from address representing the previous owner of the given token ID
@@ -334,7 +358,7 @@ contract Card is ERC721, ERC721Metadata, ERC721TokenReceiver{
         uint256 tokenId,
         bytes memory _data
     ) private returns (bool) {
-        if (to.isContract()) {
+        if (isContract(to)) {
             try IERC721Receiver(to).onERC721Received(_msgSender(), from, tokenId, _data) returns (bytes4 retval) {
                 return retval == IERC721Receiver.onERC721Received.selector;
             } catch (bytes memory reason) {
@@ -351,9 +375,61 @@ contract Card is ERC721, ERC721Metadata, ERC721TokenReceiver{
         }
     }
 
+    /**
+     * @dev Hook that is called before any token transfer. This includes minting
+     * and burning.
+     *
+     * Calling conditions:
+     *
+     * - When `from` and `to` are both non-zero, ``from``'s `tokenId` will be
+     * transferred to `to`.
+     * - When `from` is zero, `tokenId` will be minted for `to`.
+     * - When `to` is zero, ``from``'s `tokenId` will be burned.
+     * - `from` and `to` are never both zero.
+     *
+     * To learn more about hooks, head to xref:ROOT:extending-contracts.adoc#using-hooks[Using Hooks].
+     */
     function _beforeTokenTransfer(
         address from,
         address to,
         uint256 tokenId
     ) internal virtual {}
+
+    function _msgSender() internal view virtual returns (address) {
+        return msg.sender;
+    }
+
+    function toString(uint256 value) internal pure returns (string memory) {
+        // Inspired by OraclizeAPI's implementation - MIT licence
+        // https://github.com/oraclize/ethereum-api/blob/b42146b063c7d6ee1358846c198246239e9360e8/oraclizeAPI_0.4.25.sol
+
+        if (value == 0) {
+            return "0";
+        }
+        uint256 temp = value;
+        uint256 digits;
+        while (temp != 0) {
+            digits++;
+            temp /= 10;
+        }
+        bytes memory buffer = new bytes(digits);
+        while (value != 0) {
+            digits -= 1;
+            buffer[digits] = bytes1(uint8(48 + uint256(value % 10)));
+            value /= 10;
+        }
+        return string(buffer);
+    }
+
+        function isContract(address account) internal view returns (bool) {
+        // This method relies on extcodesize, which returns 0 for contracts in
+        // construction, since the code is only stored at the end of the
+        // constructor execution.
+
+        uint256 size;
+        assembly {
+            size := extcodesize(account)
+        }
+        return size > 0;
+    }
 }
