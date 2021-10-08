@@ -23,12 +23,13 @@ const server = net.createServer(socket => {
      })
  })
  console.log("JsServer is Open");
- server.listen(52300,"192.168.2.5")
+ server.listen(7666,"192.168.2.5")
  
 console.log('GameServer has Started');
 
 io.on('connection',function(socket){
-     console.log("Connection Made!");
+    console.log("Connection Made!");
+
 });
 
 

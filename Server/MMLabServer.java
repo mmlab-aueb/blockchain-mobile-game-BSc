@@ -47,7 +47,7 @@ public class MMLabServer {
 
 
             while (true) {
-                s = new Socket("192.168.2.5",52300);
+                s = new Socket("192.168.2.5",7666);
                 connection = providerSocket.accept();
                 System.out.println("Client connected");
 
