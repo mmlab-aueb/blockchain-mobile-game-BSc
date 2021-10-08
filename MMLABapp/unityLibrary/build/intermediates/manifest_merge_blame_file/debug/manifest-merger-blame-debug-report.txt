@@ -13,90 +13,95 @@
 11    <uses-feature android:glEsVersion="0x00020000" />
 11-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:18:3-52
 11-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:18:17-49
-12    <uses-feature
-12-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:19:3-88
-13        android:name="android.hardware.touchscreen"
-13-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:19:17-60
-14        android:required="false" />
-14-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:19:61-85
+12
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:19:3-65
+13-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:19:20-62
+14
 15    <uses-feature
-15-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:20:3-99
-16        android:name="android.hardware.touchscreen.multitouch"
-16-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:20:17-71
+15-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:20:3-88
+16        android:name="android.hardware.touchscreen"
+16-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:20:17-60
 17        android:required="false" />
-17-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:20:72-96
+17-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:20:61-85
 18    <uses-feature
-18-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:21:3-108
-19        android:name="android.hardware.touchscreen.multitouch.distinct"
-19-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:21:17-80
+18-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:21:3-99
+19        android:name="android.hardware.touchscreen.multitouch"
+19-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:21:17-71
 20        android:required="false" />
-20-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:21:81-105
-21
-22    <application>
-22-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:4:3-17:17
-23        <activity
-23-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:5-12:16
-24            android:name="com.unity3d.player.UnityPlayerActivity"
-24-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:15-68
-25            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
-25-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:181-362
-26            android:hardwareAccelerated="false"
-26-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:363-398
-27            android:launchMode="singleTask"
-27-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:149-180
-28            android:screenOrientation="landscape"
-28-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:111-148
-29            android:theme="@style/UnityThemeSelector" >
-29-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:69-110
-30            <intent-filter>
-30-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:6:7-9:23
-31                <action android:name="android.intent.action.MAIN" />
-31-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:7:9-61
-31-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:7:17-58
-32
-33                <category android:name="android.intent.category.LAUNCHER" />
-33-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:8:9-69
-33-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:8:19-66
-34            </intent-filter>
+20-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:21:72-96
+21    <uses-feature
+21-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:22:3-108
+22        android:name="android.hardware.touchscreen.multitouch.distinct"
+22-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:22:17-80
+23        android:required="false" />
+23-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:22:81-105
+24
+25    <application>
+25-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:4:3-17:17
+26        <activity
+26-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:5-12:16
+27            android:name="com.unity3d.player.UnityPlayerActivity"
+27-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:15-68
+28            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+28-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:181-362
+29            android:hardwareAccelerated="false"
+29-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:363-398
+30            android:launchMode="singleTask"
+30-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:149-180
+31            android:screenOrientation="landscape"
+31-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:111-148
+32            android:theme="@style/UnityThemeSelector" >
+32-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:5:69-110
+33            <intent-filter>
+33-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:6:7-9:23
+34                <action android:name="android.intent.action.MAIN" />
+34-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:7:9-61
+34-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:7:17-58
 35
-36            <meta-data
-36-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:10:7-82
-37                android:name="unityplayer.UnityActivity"
-37-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:10:18-58
-38                android:value="true" />
-38-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:10:59-79
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:8:9-69
+36-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:8:19-66
+37            </intent-filter>
+38
 39            <meta-data
-39-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:11:7-78
-40                android:name="android.notch_support"
-40-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:11:18-54
+39-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:10:7-82
+40                android:name="unityplayer.UnityActivity"
+40-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:10:18-58
 41                android:value="true" />
-41-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:11:55-75
-42        </activity>
-43
-44        <meta-data
-44-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:13:5-69
-45            android:name="unity.splash-mode"
-45-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:13:16-48
-46            android:value="0" />
-46-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:13:49-66
+41-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:10:59-79
+42            <meta-data
+42-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:11:7-78
+43                android:name="android.notch_support"
+43-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:11:18-54
+44                android:value="true" />
+44-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:11:55-75
+45        </activity>
+46
 47        <meta-data
-47-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:14:5-74
-48            android:name="unity.splash-enable"
-48-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:14:16-50
-49            android:value="True" />
-49-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:14:51-71
+47-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:13:5-69
+48            android:name="unity.splash-mode"
+48-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:13:16-48
+49            android:value="0" />
+49-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:13:49-66
 50        <meta-data
-50-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:15:5-81
-51            android:name="notch.config"
-51-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:15:16-43
-52            android:value="portrait|landscape" />
-52-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:15:44-78
+50-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:14:5-74
+51            android:name="unity.splash-enable"
+51-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:14:16-50
+52            android:value="True" />
+52-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:14:51-71
 53        <meta-data
-53-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:16:5-101
-54            android:name="unity.build-id"
-54-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:16:16-45
-55            android:value="554fdaef-82b4-4172-8179-a028946d366c" />
-55-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:16:46-98
-56    </application>
-57
-58</manifest>
+53-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:15:5-81
+54            android:name="notch.config"
+54-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:15:16-43
+55            android:value="portrait|landscape" />
+55-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:15:44-78
+56        <meta-data
+56-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:16:5-101
+57            android:name="unity.build-id"
+57-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:16:16-45
+58            android:value="a3f6d999-4584-4181-b866-e50a78971ac4" />
+58-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:16:46-98
+59    </application>
+60
+61</manifest>

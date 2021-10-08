@@ -13,9 +13,10 @@
     <meta-data android:name="unity.splash-mode" android:value="0" />
     <meta-data android:name="unity.splash-enable" android:value="True" />
     <meta-data android:name="notch.config" android:value="portrait|landscape" />
-    <meta-data android:name="unity.build-id" android:value="554fdaef-82b4-4172-8179-a028946d366c" />
+    <meta-data android:name="unity.build-id" android:value="a3f6d999-4584-4181-b866-e50a78971ac4" />
   </application>
   <uses-feature android:glEsVersion="0x00020000" />
+  <uses-permission android:name="android.permission.INTERNET" />
   <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
   <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false" />
   <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" />

@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:3:1-22:12
-INJECTED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:3:1-22:12
-INJECTED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:3:1-22:12
+ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:3:1-23:12
+INJECTED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:3:1-23:12
+INJECTED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:3:1-23:12
 	package
 		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:3:70-98
 		INJECTED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml
@@ -77,24 +77,28 @@ uses-feature#0x00020000
 ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:18:3-52
 	android:glEsVersion
 		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:18:17-49
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:19:3-65
+	android:name
+		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:19:20-62
 uses-feature#android.hardware.touchscreen
-ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:19:3-88
+ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:20:3-88
 	android:required
-		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:19:61-85
+		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:20:61-85
 	android:name
-		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:19:17-60
+		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:20:17-60
 uses-feature#android.hardware.touchscreen.multitouch
-ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:20:3-99
+ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:21:3-99
 	android:required
-		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:20:72-96
+		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:21:72-96
 	android:name
-		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:20:17-71
+		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:21:17-71
 uses-feature#android.hardware.touchscreen.multitouch.distinct
-ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:21:3-108
+ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:22:3-108
 	android:required
-		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:21:81-105
+		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:22:81-105
 	android:name
-		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:21:17-80
+		ADDED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:22:17-80
 uses-sdk
 INJECTED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml

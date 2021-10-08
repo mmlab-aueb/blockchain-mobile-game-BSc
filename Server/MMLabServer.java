@@ -49,6 +49,8 @@ public class MMLabServer {
             while (true) {
                 s = new Socket("192.168.2.6",7666);
                 connection = providerSocket.accept();
+                System.out.println("Client connected");
+
                 BufferedReader inFromClient = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 
                 String message = inFromClient.readLine();
