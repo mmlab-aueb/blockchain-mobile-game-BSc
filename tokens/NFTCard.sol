@@ -2,17 +2,12 @@
 
 pragma solidity ^0.8.0;
 
-import "IERC721.sol";
-import "IERC721Receiver.sol";
-import "IERC721Metadata.sol";
+import "./IERC721.sol";
+import "./IERC721Receiver.sol";
+import "./IERC721Metadata.sol";
 
 
-/**
- * @dev Implementation of https://eips.ethereum.org/EIPS/eip-721[ERC721] Non-Fungible Token Standard, including
- * the Metadata extension, but not including the Enumerable extension, which is available separately as
- * {ERC721Enumerable}.
- */
-contract Card is  IERC721, IERC721Metadata {
+contract NFTCard is  IERC721, IERC721Metadata {
 
     // Token name
     string private _name;

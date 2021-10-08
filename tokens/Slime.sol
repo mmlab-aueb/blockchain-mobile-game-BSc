@@ -1,9 +1,11 @@
+// SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.6;
 
 contract CardERC20 {
 
-    string public constant name = "CardERC20";
-    string public constant symbol = "CRD";
+    string public constant name = "Slime";
+    string public constant symbol = "SLM";
     uint8 public constant decimals = 18;  
 
 
@@ -20,7 +22,7 @@ contract CardERC20 {
     using SafeMath for uint256;
 
 
-   constructor(uint256 total) public {  
+   constructor(uint256 total){  
 	totalSupply_ = total;
 	balances[msg.sender] = totalSupply_;
     }  
