@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
     public void send(View v){
 
         com.example.mmlabapp.MessageSender messageSender = new com.example.mmlabapp.MessageSender();
-        text = text + "/" +username.getText().toString();
-        text2 = text2 + "/" + password.getText().toString();
+        text = username.getText().toString();
+        text2 = password.getText().toString();
         messageSender.execute(text,text2);
 
         startActivity(new Intent(this, UnityHandlerActivity.class));
