@@ -1,5 +1,7 @@
 var io = require('socket.io')(process.env.PORT || 52300);
 const net = require("net");
+const CardMap = new Map();
+var tesy;
 
 const server = net.createServer(socket => {
 
@@ -7,7 +9,7 @@ const server = net.createServer(socket => {
         console.log("Mpika");
     })
      
-     socket.on("data", data => {
+     socket.on("data", data => { //when you accept a socket from java server
          console.log("Mpika");
          const WalletProvider = require("@truffle/hdwallet-provider");
          const androidData = data.toString().split(":");
@@ -23,18 +25,24 @@ const server = net.createServer(socket => {
      })
  })
  console.log("JsServer is Open");
-<<<<<<< HEAD
  server.listen(7666,"192.168.2.5")
-=======
- server.listen(52300,"localhost")
->>>>>>> b78a16b1240956ed148018652f5622a4467d699c
  
 console.log('GameServer has Started');
 
-io.on('connection',function(socket){
+io.on('connection',function(socket){ //when you accept a socket from unity
     console.log("Connection Made!");
+    test = "hi";
+    CardMap.set('Elf', 10);
+    console.log("Sending data");
+    socket.emit('send',{WalletMap : CardMap});
+    //socket.emit('send2',{test2 : test}); works
 
+    socket.on('disconnect',function(socket){
+        console.log("Unity Disconnected");
+    })
 });
+
+
 
 
 
