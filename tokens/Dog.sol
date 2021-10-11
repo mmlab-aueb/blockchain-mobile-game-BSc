@@ -2,11 +2,11 @@
 
 pragma solidity ^0.8.6;
 
-contract CardERC20 {
+contract Dog {
 
     string public constant name = "Dog";
     string public constant symbol = "DOG";
-    uint8 public constant decimals = 18;  
+    uint8 public constant decimals = 0;  
 
 
     event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
