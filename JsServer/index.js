@@ -1,8 +1,7 @@
 var io = require('socket.io')(process.env.PORT || 52300);
 const net = require("net");
-const CardMap = new Map();
-var tesy;
-
+var test;
+var CardMap = [];
 const server = net.createServer(socket => {
 
     socket.on('connection',function(socket){
@@ -32,10 +31,17 @@ console.log('GameServer has Started');
 io.on('connection',function(socket){ //when you accept a socket from unity
     console.log("Connection Made!");
     test = "hi";
-    CardMap.set('Elf', 10);
-    console.log("Sending data");
-    socket.emit('send',{WalletMap : CardMap});
-    //socket.emit('send2',{test2 : test}); works
+    CardMap['Elf'] = 20;
+    CardMap['Demon'] = 20;
+    
+    for (const [key, value] of Object.entries(CardMap)) {
+        console.log("Sending data");
+        socket.emit('send',{WalletMap : key});
+        console.log("Sending data");
+        socket.emit('send',{WalletMap : value});
+      }
+    
+
 
     socket.on('disconnect',function(socket){
         console.log("Unity Disconnected");
