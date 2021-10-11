@@ -30,9 +30,9 @@ console.log('GameServer has Started');
 
 io.on('connection',function(socket){ //when you accept a socket from unity
     console.log("Connection Made!");
-    test = "hi";
     CardMap['Elf'] = 20;
     CardMap['Demon'] = 20;
+    CardMap['Human'] = 20;
     
     for (const [key, value] of Object.entries(CardMap)) {
         console.log("Sending data");
