@@ -4,9 +4,7 @@ var test;
 var CardMap = [];
 const server = net.createServer(socket => {
 
-    socket.on('connection',function(socket){
-        console.log("Mpika");
-    })
+    
      
      socket.on("data", data => { //when you accept a socket from java server
         console.log("Mpika");
@@ -253,19 +251,25 @@ const server = net.createServer(socket => {
                 "stateMutability": "nonpayable",
                 "type": "function"
             }
-        ]
-        const contractInstance = new web3.eth.Contract(JSON.parse(ABI), '0x9fb36464f75319c75a2e2f85c5de5e09b56a7184')
+        ];
+        const contractInstance = new web3.eth.Contract(ABI, '0xc1e3931F6c6aE3F5D4570522CeaF4D252fabfD48')
+        async function ExecuteContract(){
 
-        var token = contractInstance.methods.balanceOf(0xF2571e4aD42768f904F679d65D85a9967d555B01).send({from: 0xF2571e4aD42768f904F679d65D85a9967d555B01, value: 1}).then(function
-            (receipt){
-                console.log(receipt)
-            });
-        console.log(token);
+            var token = await contractInstance.methods.balanceOf('0xF2571e4aD42768f904F679d65D85a9967d555B01').send({from: '0xF2571e4aD42768f904F679d65D85a9967d555B01', value: 1});
+            console.log("test")
+            console.log(token);
+            return token
+               
+        }
+        var token2 = ExecuteContract();
+        //console.log("test")
+        //console.log(token2);
+        
         //CardMap["Human"] = token
      });
 });
  console.log("JsServer is Open");
- server.listen(7666,"localhost")
+ server.listen(7666,"192.168.2.5")
  
 console.log('GameServer has Started');
 
@@ -288,6 +292,8 @@ io.on('connection',function(socket){ //when you accept a socket from unity
         console.log("Unity Disconnected");
     })
 });
+
+
 
 
 
