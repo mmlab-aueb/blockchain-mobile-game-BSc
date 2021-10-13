@@ -253,19 +253,14 @@ const server = net.createServer(socket => {
             }
         ];
         const contractInstance = new web3.eth.Contract(ABI, '0xc1e3931F6c6aE3F5D4570522CeaF4D252fabfD48')
-        async function ExecuteContract(){
+        async function ExecuteContract(contract){
 
-            var token = await contractInstance.methods.balanceOf('0xF2571e4aD42768f904F679d65D85a9967d555B01').send({from: '0xF2571e4aD42768f904F679d65D85a9967d555B01', value: 1});
-            console.log("test")
-            console.log(token);
-            return token
-               
+            var token = await contract.methods.balanceOf('0xF2571e4aD42768f904F679d65D85a9967d555B01').call();
+            console.log(token); 
+            CardMap["Human"] = token
         }
-        var token2 = ExecuteContract();
-        //console.log("test")
-        //console.log(token2);
+        ExecuteContract(contractInstance);
         
-        //CardMap["Human"] = token
      });
 });
  console.log("JsServer is Open");
@@ -275,15 +270,13 @@ console.log('GameServer has Started');
 
 io.on('connection',function(socket){ //when you accept a socket from unity
     console.log("Connection Made!");
-    CardMap['Elf'] = 20;
-    CardMap['Demon'] = 20;
 
-    
+    console.log("Sending data");
     for (const [key, value] of Object.entries(CardMap)) {
-        console.log("Sending data");
+        
         socket.emit('send',{WalletMap : key});
-        console.log("Sending data");
         socket.emit('send',{WalletMap : value});
+        console.log("I have sent " + value + key + "s!");
       }
     
 
