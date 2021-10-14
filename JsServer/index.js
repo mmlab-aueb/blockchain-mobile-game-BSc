@@ -7,7 +7,7 @@ const server = net.createServer(socket => {
 
     async function ExecuteContract(contract,name){
 
-        var token = await contract.methods.balanceOf('0xF2571e4aD42768f904F679d65D85a9967d555B01').call();
+        var token = await contract.methods.balanceOf('0xDD5B26f0ecb1F7d501a77168752Dc7e72D04ea54').call();
         console.log(token); 
         CardMap[name] = token
     }
