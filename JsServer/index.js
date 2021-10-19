@@ -7,8 +7,7 @@ const server = net.createServer(socket => {
 
     async function ExecuteContract(contract,name){
 
-        var token = await contract.methods.balanceOf('0xDD5B26f0ecb1F7d501a77168752Dc7e72D04ea54').call();
-        console.log(token); 
+        var token = await contract.methods.balanceOf('0xDD5B26f0ecb1F7d501a77168752Dc7e72D04ea54').call(); 
         CardMap[name] = token
     }
      
@@ -63,7 +62,7 @@ const server = net.createServer(socket => {
      });
 });
  console.log("JsServer is Open");
- server.listen(7666,"192.168.2.5")
+ server.listen(7666,"192.168.2.9")
  
 console.log('GameServer has Started');
 

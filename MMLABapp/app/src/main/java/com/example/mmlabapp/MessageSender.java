@@ -21,7 +21,7 @@ public class MessageSender extends AsyncTask<String,Void,Void>
         String password = voids[1];
         String message = username + ":" + password;
         try{
-            s = new Socket("192.168.2.5",7800);
+            s = new Socket("192.168.2.9",7800);
             pw = new PrintWriter(s.getOutputStream());
             pw.write(message);
             pw.flush();
