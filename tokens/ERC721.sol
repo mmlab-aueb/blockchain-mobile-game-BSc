@@ -7,7 +7,7 @@ import "./IERC721Receiver.sol";
 import "./IERC721Metadata.sol";
 
 
-contract ERC721 is  IERC721, IERC721Metadata, IERC721Receiver {
+contract ERC721 is  IERC721, IERC721Metadata {
 
     // Token name
     string private _name;
