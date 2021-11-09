@@ -100,7 +100,7 @@
 56-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:16:5-101
 57            android:name="unity.build-id"
 57-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:16:16-45
-58            android:value="92c8feb4-573a-46bb-abfe-437262fcb1a6" />
+58            android:value="82c2c021-2b98-4f4f-94d7-3e6f60d15e15" />
 58-->C:\Users\gragas\Desktop\Sxoli\MMLab\MobileGameWithBlockChain\blockchain-mobile-game-BSc\MMLABapp\unityLibrary\src\main\AndroidManifest.xml:16:46-98
 59    </application>
 60
