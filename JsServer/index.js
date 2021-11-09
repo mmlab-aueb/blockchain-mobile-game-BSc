@@ -58,11 +58,23 @@ const server = net.createServer(socket => {
         const ABI12 = ABIs["FIREBALL"]; // fireball
         const contractInstance12 = new web3.eth.Contract(ABI12, '0xd08c3BAC17e6E50EE6B467Dad7BbF40163616ec0');
         ExecuteContract(contractInstance12,"Fireball");
+        const ABI13 = ABIs["EXODIA"]; // exodia
+        const contractInstance13 = new web3.eth.Contract(ABI13, '0x4C298F128571B0E4adbc90B9C75c5b531f15B46e');
+        ExecuteContract(contractInstance13,"Exodia");
+        const ABI14 = ABIs["DIABLO"]; // diablo
+        const contractInstance14 = new web3.eth.Contract(ABI14, '0x312e077B3b3Ef353c285caC9c9251e4CC3239A4f');
+        ExecuteContract(contractInstance14,"Diablo");
+        const ABI15 = ABIs["SUNJINWOO"]; // sunjinwoo
+        const contractInstance15 = new web3.eth.Contract(ABI15, '0x8C479ABEac295c12992d8ad61fF37c80F24AF013');
+        ExecuteContract(contractInstance15,"Sunjinwoo");
+        const ABI16 = ABIs["HYGEIA"]; // hygeia
+        const contractInstance16 = new web3.eth.Contract(ABI16, '0x0Db746b2E4F504332A814DF079eb012a8270f194');
+        ExecuteContract(contractInstance16,"Hygieia");
 
      });
 });
  console.log("JsServer is Open");
- server.listen(7666,"192.168.2.9")
+ server.listen(7667,"192.168.2.9")
  
 console.log('GameServer has Started');
 
@@ -71,7 +83,6 @@ io.on('connection',function(socket){ //when you accept a socket from unity
 
     console.log("Sending data");
     for (const [key, value] of Object.entries(CardMap)) {
-        
         socket.emit('send',{WalletMap : key});
         socket.emit('send',{WalletMap : value});
         console.log("I have sent " + value + key + "s!");
