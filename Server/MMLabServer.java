@@ -49,6 +49,7 @@ public class MMLabServer {
             while (true) {
                 s = new Socket("192.168.2.9",7667);
                 connection = providerSocket.accept();
+                long start = System.currentTimeMillis();
                 System.out.println("Client connected");
 
                 BufferedReader inFromClient = new BufferedReader(new InputStreamReader(connection.getInputStream()));
@@ -59,7 +60,9 @@ public class MMLabServer {
 
                 SendMessageToJS(message);
 
-
+                long end = System.currentTimeMillis();
+                long elapsedTime = end - start;
+                System.out.println(elapsedTime); 
                 connection.close();
                 s.close();
             }

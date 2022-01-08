@@ -3,6 +3,8 @@ const net = require("net");
 const ABIs = require('./ABIs.json');
 var test;
 var CardMap = [];
+const { performance } = require('perf_hooks');
+var startTime = performance.now()
 const server = net.createServer(socket => {
 
     async function ExecuteContract(contract,name){
@@ -13,6 +15,7 @@ const server = net.createServer(socket => {
      
      socket.on("data", data => { //when you accept a socket from java server
         console.log("Mpika");
+
         const WalletProvider = require("@truffle/hdwallet-provider");
         const androidData = data.toString().split(":");
         console.log(androidData);
@@ -86,11 +89,17 @@ io.on('connection',function(socket){ //when you accept a socket from unity
         socket.emit('send',{WalletMap : key});
         socket.emit('send',{WalletMap : value});
         console.log("I have sent " + value + key + "s!");
+        var endTime = performance.now()
+
+
       }
+        console.log(`Call to doSomething took ${endTime - startTime} milliseconds`)
     
 
 
     socket.on('disconnect',function(socket){
+
+
         console.log("Unity Disconnected");
     })
 });
